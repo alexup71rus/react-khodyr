@@ -20,14 +20,14 @@ ul {
 
 a {
   text-decoration: none;
-  color: #eee;
+  color: #999;
   border-bottom: 1px solid transparent;
   transition: .5s;
 }
 
 a:hover {
-  color: #999;
-  border-bottom: 1px solid #999;
+  color: #eee;
+  border-bottom: 1px solid #eee;
 }
 
 h1, p {
