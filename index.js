@@ -42,9 +42,11 @@ class App extends Component {
 
   render() {
     return (
-      <nav className="navigation__menu">
-        <Menu items={this.state.manu} />
-      </nav>
+      <div className="section">
+        <nav className="navigation">
+          <Menu items={this.state.manu} />
+        </nav>
+      </div>
     );
   }
 }

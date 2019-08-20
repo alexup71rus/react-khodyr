@@ -1,21 +1,24 @@
 html, body {
-  background-color: #222;
+  background-color: #111;
   color: #eee;
   margin: 0;
 }
 
-.navigation__menu {
+.navigation {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
+  z-index: 1;
+  transition: 1s;
 }
 
 ul {
   list-style-type: none;
   display: inline-block;
-  padding: 0;
   margin-top: 45vh;
+  background-color: rgba(0, 0, 0, 0.26);
+  z-index: 1;
 }
 
 a {
@@ -34,9 +37,29 @@ h1, p {
   font-family: Lato;
 }
 
+.section {
+  height: 100vh;
+}
+
+.section::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/767b2780249613.5cdd171b4853e.png);
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  pointer-events: none;
+  opacity: .5;
+}
+
 @media screen and (min-width: 600px) {
   ul {
     margin-top: 50vh;
+    padding: 5px 5px;
   }
 
   li {
@@ -48,10 +71,16 @@ h1, p {
 @media screen and (max-width: 600px) {
   ul {
     margin-top: 40vh;
+    padding: 5px 15px;
   }
   
   li {
     text-align: center;
     margin: 10px 0px;
+  }
+  
+  .section::after {
+    background-position: 40%;
+    opacity: .2;
   }
 }
